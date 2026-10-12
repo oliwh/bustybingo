@@ -1,0 +1,72 @@
+:root {
+    --bg1: #495057ff;
+    --bg2: #1b263bff;
+    --fg1: #415a77ff;
+    --fg2: #778da9ff;
+    --highlight: #e0e1ddff;
+    --green: #4f772dff;
+    --dgreen: #132a13ff;
+    --lgreen: #6a994eff;
+    background-color: var(--bg1);
+    color: var(--highlight);
+    font-family: 'Comic Sans MS';
+}
+
+.title {
+    font-family: gluten; 
+    font-size: 100px;
+    background: linear-gradient(in hsl longer hue 90deg, red 0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.undo {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: var(--highlight);
+    background-color: var(--fg1);
+    border: none;
+    box-shadow: 0 9px var(--bg2), inset -4px -3px 5px var(--bg2);
+}
+
+.undo:active {
+    background-color: var(--fg1);
+    box-shadow: 0 5px var(--bg2), inset -4px -3px 5px var(--bg2) ;
+    transform: translateY(4px);
+
+}
+
+.undo:hover {background-color: var(--fg2);}
+
+.draw {
+    font-size: 100px;
+    font-family: "Frijole";
+    padding: 3rem;
+    border-radius: 5rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: var(--highlight);
+    background-color: var(--green);
+    border: none;
+    box-shadow: 0 20px var(--dgreen), inset -5px -5px 10px var(--dgreen);
+}
+
+.draw:active {
+    background-color: var(--green);
+    box-shadow: 0 8px var(--dgreen), inset -5px -5px 10px var(--dgreen) ;
+    transform: translateY(12px);
+
+}
+
+.draw:hover {background-color: var(--lgreen);}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
