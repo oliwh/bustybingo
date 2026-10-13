@@ -33,6 +33,7 @@ function numGen(data) {
     data.splice(num, 1);
     console.log(data);
     console.log(history);
+    document.getElementById("recent").innerHTML = history.slice(-5).map(element => element[0]).join(" ");
     return;
 }
 
@@ -41,6 +42,7 @@ function undo(data) {
     data.sort((a, b) => a[0] - b[0]);
     console.log(data);
     console.log(history);
+    document.getElementById("recent").innerHTML = history.slice(-5).map(element => element[0]).join(" ");
     return;
 };
 
