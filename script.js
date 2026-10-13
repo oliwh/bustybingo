@@ -26,8 +26,14 @@ function rndNum(data) {
 }
 
 function numGen(data) {
+    
+    /* Open modal */
+    document.getElementById("myModal").style.display = "block";
+
     let num = rndNum(data);
     console.log("Index", num, "chosen, corresponding to:", data[num][0], data[num][1]);
+
+    document.getElementById("modalNum").innerHTML = data[num][1] + ", " + data[num][0];
 
     history.push(data[num]);
     data.splice(num, 1);
@@ -46,8 +52,22 @@ function undo(data) {
     return;
 };
 
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+// Close when clicking outside the popup
+window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+
 async function main() {
     data = await readCSV("./db.csv");
 }
 
 main();
+

@@ -18,14 +18,22 @@
             <h1 class="title">BUSTy Bingo!</h1>
         </div>
         <div class="center">
-            <button class="draw" type="button" onclick="numGen(data)">Let it ride!</button>
+            <button class="draw" id="drawID" type="button" onclick="numGen(data)">Let's go gambling!</button>
         </div>
         <br>
         <div class="center">
             <h2 style="font-size: 50px;">Recent Numbers:</h2>
         </div>
         <div class="center">
-            <p id="recent"></p>
+            <p id="recent" style="font-size: 36px"></p>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h1>And the number is...</h1>
+                <br>
+                <h2 id="modalNum"></h2>
+            </div>
         </div>
     </body>
 </html>
