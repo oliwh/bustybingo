@@ -10,30 +10,31 @@
         <script src="papaparse.min.js"></script>
         <script src="script.js"></script>
     </head>
-    <nav>
+    <nav style="z-index: 1000; position: relative;">
         <button class="undo" type="button" onclick="undo(data)">undo pls</button>
     </nav>
     <body>
-        <div class="center">
+        <div class="center" style="transform: translateY(-50px);">
             <h1 class="title">BUSTy Bingo!</h1>
         </div>
-        <div class="center">
+        <div class="center" style="transform: translateY(-50px);">
             <button class="draw" id="drawID" type="button" onclick="numGen(data)">Let's go gambling!</button>
         </div>
-        <br>
-        <div class="center">
+        <div class="center" style="transform: translateY(-50px);">
             <h2 style="font-size: 50px;">Recent Numbers:</h2>
         </div>
-        <div class="center">
-            <p id="recent" style="font-size: 36px"></p>
+        <div class="center" style="transform: translateY(-50px);">
+            <p id="recent" style="font-size: 36px; transform: translateY(-100%);" ></p>
         </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h1>And the number is...</h1>
-                <br>
                 <h2 id="modalNum"></h2>
             </div>
+        </div>
+        <div class="center">
+            <div id="buttonGrid" class="grid"></div>
         </div>
     </body>
 </html>

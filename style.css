@@ -1,5 +1,5 @@
 :root {
-    --bg1: #495057ff;
+    --bg1: #25242aff;
     --bg2: #1b263bff;
     --fg1: #415a77ff;
     --fg2: #778da9ff;
@@ -67,7 +67,7 @@
 
 .center {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -89,7 +89,7 @@
     width: 600px;
     border-radius: 8px;
     position: relative;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -99,4 +99,31 @@
     top: 10px;
     font-size: 28px;
     cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 10px;
+    position: absolute;
+    bottom: 5%;
+}
+
+.grid button {
+    padding: 1rem 1rem;
+    cursor: pointer;
+    font-size: 36px;
+    border: 5px solid var(--fg1);
+    background-color: var(--fg2);
+    border-radius: 1rem;
+    color: var(--highlight);  
+    font-family: 'Comic Sans MS'; 
+}
+
+
+.grid button.selected {
+    background-color: var(--green);
+    color: white;
 }
