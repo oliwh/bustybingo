@@ -33,6 +33,7 @@ function numGen(data, num = rndNum(data)) {
     console.log("Index", num, "chosen, corresponding to:", data[num][0], data[num][1]);
 
     document.getElementById("modalNum").innerHTML = data[num][1] + ", " + data[num][0];
+    console.log("Mod:" + data[num][2]);
     if(!!data[num][2]) {
         document.getElementById("modalMod").innerHTML = data[num][2].charAt(0).toUpperCase() + data[num][2].slice(1) + " time!";
     } else {
